@@ -4,7 +4,7 @@
 #include <math.h>
 #include "Agenda.h" //inclui os Protótipos
 #define tam1 101
-#define tam2 15
+#define tam2 11
 
 
 int limite_comparador = 15;
