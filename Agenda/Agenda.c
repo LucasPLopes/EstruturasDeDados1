@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #include "Agenda.h" //inclui os Protótipos
 #define tam1 101
 #define tam2 15
@@ -142,7 +143,7 @@ void imprime_dados(struct contato c )
 	printf("Nome: %s\n", c.nome);
 	printf("Telefone: %s\n",c.telefone);
 	printf("Endereco: %s\n", c.endereco);
-	printf("CEP: %i\n", c.cep);
+	printf("CEP: %i\n", abs(c.cep));
 	char nasc[10] = {};
 	printf("Nascimento: %c%c%c%c%c%c%c%c%c%c\n", c.nascimento[0],c.nascimento[1],'/',c.nascimento[3],c.nascimento[4],'/',c.nascimento[6],c.nascimento[7],c.nascimento[8],c.nascimento[9]);
 	printf("$\n");
@@ -201,7 +202,9 @@ void grava_lista_arq(FILE *fp, Lista*li)
     while(no != NULL)
 	{
 		fflush(fp);
-        fprintf(fp,"%s\n%s\n%s\n%i\n%s\n$\n",
+		fflush(stdout);
+		
+        fprintf(fp,"%s\n%s\n%s\n%i\n%10s\n$\n",
 		(no)->dados.nome,(no)->dados.telefone, (no)->dados.endereco, (no)->dados.cep,(no)->dados.nascimento);	
         no = no->prox;
     
