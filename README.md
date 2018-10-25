@@ -1,4 +1,4 @@
-# Estruturas De Dados 1
+# Estrutura De Dados
 
-Projetos realizados na disciplina Estruturas de Dados I
+Projetos realizados na disciplina Estrutura de Dados I
 
